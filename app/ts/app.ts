@@ -6,29 +6,33 @@
 // console.log(soma(1, "2"));
 // console.log(soma(1));
 
-// enum DiasSemana {
-//   SEGUNDA = "Segunda",
-//   TERCA = "Terça",
-//   QUARTA = "Quarta",
-//   QUINTA = "Quinta",
-//   SEXTA = "Sexta",
-//   SABADO = "Sábado",
-//   DOMINGO = "Domingo"
-// }
+enum DiasSemana {
+  SEGUNDA = "Segunda",
+  TERCA = "Terça",
+  QUARTA = "Quarta",
+  QUINTA = "Quinta",
+  SEXTA = "Sexta",
+  SABADO = "Sábado",
+  DOMINGO = "Domingo"
+}
 
-// namespace DiasSemana {
-//   function isDiaUtil(dia: DiasSemana): boolean {
-//     if (dia === DiasSemana.SABADO || dia === DiasSemana.DOMINGO) {
-//       return false;
-//     }
+namespace DiasSemana {
+  function isDiaUtil(dia: DiasSemana): boolean {
+    if (dia === DiasSemana.SABADO || dia === DiasSemana.DOMINGO) {
+      return false;
+    }
 
-//     return true;
-//   }
-// }
+    return true;
+  }
 
-// const dia: DiasSemana = DiasSemana.SEGUNDA;
+  const diaZero: DiasSemana = DiasSemana.DOMINGO;
+  const diaUm: DiasSemana = DiasSemana.SEGUNDA;
 
-// const diaSemana: DiasSemana = is;
+  console.log(isDiaUtil(diaZero));
+  console.log(isDiaUtil(diaUm));
+}
+
+
 
 
 // class MeuNumero {
@@ -52,30 +56,30 @@
 // console.log(number.getInteiro());
 // console.log(number.getDecimal());
 
-class Transacao {
-  readonly valor: number;
-  readonly desconto: number;
+// class Transacao {
+//   readonly valor: number;
+//   readonly desconto: number;
 
-  constructor(valor: number, desconto: number) {
-    this.valor = valor;
-    this.desconto = desconto;
-  }
+//   constructor(valor: number, desconto: number) {
+//     this.valor = valor;
+//     this.desconto = desconto;
+//   }
 
-  calcularDesconto(): number {
-    return this.valor * (1 - this.desconto / 100);
-  }
+//   calcularDesconto(): number {
+//     return this.valor * (1 - this.desconto / 100);
+//   }
 
-  getValor(): number {
-    return this.valor;
-  }
+//   getValor(): number {
+//     return this.valor;
+//   }
 
-  getDesconto(): number {
-    return this.desconto;
-  }
-}
+//   getDesconto(): number {
+//     return this.desconto;
+//   }
+// }
 
-const transacao = new Transacao(100, 25);
+// const transacao = new Transacao(100, 25);
 
-console.log(transacao.getValor());
-console.log(transacao.getDesconto());
-console.log(transacao.calcularDesconto());
+// console.log(transacao.getValor());
+// console.log(transacao.getDesconto());
+// console.log(transacao.calcularDesconto());

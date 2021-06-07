@@ -59,8 +59,33 @@ Questão 03 -
 
 Questão 04 - 
 
-a) 
+```ts
+enum DiasSemana {
+  SEGUNDA = "Segunda",
+  TERCA = "Terça",
+  QUARTA = "Quarta",
+  QUINTA = "Quinta",
+  SEXTA = "Sexta",
+  SABADO = "Sábado",
+  DOMINGO = "Domingo"
+}
 
+namespace DiasSemana {
+  function isDiaUtil(dia: DiasSemana): boolean {
+    if (dia === DiasSemana.SABADO || dia === DiasSemana.DOMINGO) {
+      return false;
+    }
+
+    return true;
+  }
+
+  const diaZero: DiasSemana = DiasSemana.DOMINGO;
+  const diaUm: DiasSemana = DiasSemana.SEGUNDA;
+
+  console.log(isDiaUtil(diaZero)); // false
+  console.log(isDiaUtil(diaUm)); // true
+}
+```
 
 Questão 05 -
 
