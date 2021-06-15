@@ -1,65 +1,26 @@
-// function soma(x: number, y?: any): number {
-//   return x + y;
-// }
-// console.log(soma(1, 2));
-// console.log(soma(1, "2"));
-// console.log(soma(1));
-var DiasSemana;
-(function (DiasSemana) {
-    DiasSemana["SEGUNDA"] = "Segunda";
-    DiasSemana["TERCA"] = "Ter\u00E7a";
-    DiasSemana["QUARTA"] = "Quarta";
-    DiasSemana["QUINTA"] = "Quinta";
-    DiasSemana["SEXTA"] = "Sexta";
-    DiasSemana["SABADO"] = "S\u00E1bado";
-    DiasSemana["DOMINGO"] = "Domingo";
-})(DiasSemana || (DiasSemana = {}));
-(function (DiasSemana) {
-    function isDiaUtil(dia) {
-        if (dia === DiasSemana.SABADO || dia === DiasSemana.DOMINGO) {
-            return false;
-        }
-        return true;
-    }
-    const diaZero = DiasSemana.DOMINGO;
-    const diaUm = DiasSemana.SEGUNDA;
-    console.log(isDiaUtil(diaZero));
-    console.log(isDiaUtil(diaUm));
-})(DiasSemana || (DiasSemana = {}));
-// class MeuNumero {
-//   readonly numero: number;
-//   constructor(numero: number) {
-//     this.numero = numero;
-//   }
-//   getInteiro(): number {
-//     return Math.trunc(this.numero);
-//   }
-//   getDecimal(): number {
-//     return Number((this.numero - Math.floor(this.numero)).toFixed(2));
-//   }
-// }
-// const number = new MeuNumero(24.3);
-// console.log(number.getInteiro());
-// console.log(number.getDecimal());
-// class Transacao {
-//   readonly valor: number;
-//   readonly desconto: number;
-//   constructor(valor: number, desconto: number) {
-//     this.valor = valor;
-//     this.desconto = desconto;
-//   }
-//   calcularDesconto(): number {
-//     return this.valor * (1 - this.desconto / 100);
-//   }
-//   getValor(): number {
-//     return this.valor;
-//   }
-//   getDesconto(): number {
-//     return this.desconto;
-//   }
-// }
-// const transacao = new Transacao(100, 25);
-// console.log(transacao.getValor());
-// console.log(transacao.getDesconto());
-// console.log(transacao.calcularDesconto());
+import Jogo from "./jogo/Jogo";
+import { Cavaleiro, Personagem, Soldado } from "./jogo/personagens/Personagens";
+function main() {
+    const personagem = new Personagem(1, 'Citizen', 100);
+    const soldado1 = new Soldado(2, 'Soldier', 100, 8);
+    const soldado2 = new Soldado(3, 'Archer', 100, 7);
+    const cavaleiro = new Cavaleiro(4, 'Knight', 100, 10);
+    const jogo = new Jogo();
+    jogo.incluir(personagem);
+    jogo.incluir(soldado1);
+    jogo.incluir(soldado2);
+    jogo.incluir(cavaleiro);
+    jogo.atacar(2, 1);
+    jogo.atacar(4, 2);
+    jogo.atacar(3, 4);
+    jogo.atacar(4, 3);
+    jogo.avaliarBatalha();
+    /*
+      ID: 1; Nome: Citizen; Energia: 92.00; Está vivo? true
+      ID: 2; Nome: Soldier; Energia: 90.00; Está vivo? true
+      ID: 3; Nome: Archer; Energia: 90.00; Está vivo? true
+      ID: 4; Nome: Knight; Energia: 97.67; Está vivo? true
+    */
+}
+main();
 //# sourceMappingURL=app.js.map

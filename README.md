@@ -169,3 +169,8 @@ console.log(transacao.getValor()); // 100
 console.log(transacao.getDesconto()); // 25
 console.log(transacao.calcularDesconto()); // 75
 ```
+
+## Exercícios do dia 10 de junho
+
+Questão 01 -  
+Resposta: 
