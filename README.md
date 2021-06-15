@@ -173,4 +173,9 @@ console.log(transacao.calcularDesconto()); // 75
 ## Exercícios do dia 10 de junho
 
 Questão 01 -  
+Resposta: https://github.com/kauecdev/exercicios-typescript/blob/main/app/ts/iteravel/Iteravel.ts
+
+Questão 02 -  
 Resposta: 
+- Implementação: https://github.com/kauecdev/exercicios-typescript/tree/main/app/ts/jogo
+- Teste: https://github.com/kauecdev/exercicios-typescript/blob/main/app/ts/app.ts
