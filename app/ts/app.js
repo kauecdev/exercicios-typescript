@@ -1,5 +1,5 @@
-import Jogo from "./jogo/Jogo";
-import { Cavaleiro, Personagem, Soldado } from "./jogo/personagens/Personagens";
+import Jogo from "./jogo/Jogo.js";
+import { Cavaleiro, Personagem, Soldado } from "./jogo/personagens/Personagens.js";
 function main() {
     const personagem = new Personagem(1, 'Citizen', 100);
     const soldado1 = new Soldado(2, 'Soldier', 100, 8);
@@ -11,16 +11,13 @@ function main() {
     jogo.incluir(soldado2);
     jogo.incluir(cavaleiro);
     jogo.atacar(2, 1);
+    jogo.avaliarBatalha();
     jogo.atacar(4, 2);
+    jogo.avaliarBatalha();
     jogo.atacar(3, 4);
+    jogo.avaliarBatalha();
     jogo.atacar(4, 3);
     jogo.avaliarBatalha();
-    /*
-      ID: 1; Nome: Citizen; Energia: 92.00; Está vivo? true
-      ID: 2; Nome: Soldier; Energia: 90.00; Está vivo? true
-      ID: 3; Nome: Archer; Energia: 90.00; Está vivo? true
-      ID: 4; Nome: Knight; Energia: 97.67; Está vivo? true
-    */
 }
 main();
 //# sourceMappingURL=app.js.map
